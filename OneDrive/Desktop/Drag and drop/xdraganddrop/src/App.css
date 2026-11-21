@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: #0f172a;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 12px;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.1);
+  padding: 22px 20px 20px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 0 0 14px;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.box {
+  aspect-ratio: 1 / 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px dashed #dfe5ee;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: grab;
+  user-select: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.box.dragging {
+  border: 1.5px solid #60a5fa;
+  background: #f0f7ff;
+}
+
+.box.over {
+  border: 1.5px dashed #4ade80;
+  background: #ecfdf3;
+  color: #9ca3af;
+}
+
+.tip {
+  margin: 14px 0 0;
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.tip code {
+  background: #eef2f7;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.62rem;
+  color: #334155;
+}
